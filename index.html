@@ -3,356 +3,878 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Comprehensive Clinical Record - Stage 2 Genetic Hypertension</title>
+    <meta name="theme-color" content="#f5f5ef" />
+    <meta
+      name="description"
+      content="An interactive, evidence-informed guide to understanding, measuring, and managing high blood pressure."
+    />
+    <title>Pressure, Clearly — an interactive guide to hypertension</title>
     <link rel="stylesheet" href="design.css" />
+    <script src="bone.js" defer></script>
   </head>
   <body>
-    <div class="alert-banner">
-      <h2>CRITICAL MEDICAL EMERGENCY WARNING</h2>
-      <p>
-        <span class="highlight">Active Symptoms Reported:</span> Acute chest
-        pain radiating directly to the left shoulder, accompanied by shortness
-        of breath.
-      </p>
-      <p>
-        <span class="highlight">Current Status:</span> 19 years old with
-        untreated Stage 2 Hypertension (Systolic 140–150+ mmHg). Off blood
-        pressure medication for 1 month.
-      </p>
-      <p>
-        <span class="highlight">Immediate Risk:</span> Acute myocardial ischemia
-        (heart attack) or aortic wall dissection. Requires immediate emergency
-        hospital evaluation.
-      </p>
-      <a href="tel:112" class="action-btn emergency-btn"
-        >Call Emergency Services</a
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Pressure, Clearly home"
+        ><span class="brand-mark">+</span> pressure<span>,</span> clearly</a
       >
-    </div>
+      <nav aria-label="Main navigation">
+        <a href="#learn">Learn</a><a href="#measure">Check a reading</a
+        ><a href="#protect">Everyday steps</a><a href="#sources">Sources</a>
+      </nav>
+      <a class="header-cta" href="#measure"
+        >Know your numbers <span aria-hidden="true">↗</span></a
+      >
+    </header>
 
-    <h1>Comprehensive Clinical Reference & History</h1>
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="pulse-dot"></span> A clear guide to blood pressure
+          </p>
+          <h1>Small numbers.<br /><em>Big picture.</em></h1>
+          <p class="hero-intro">
+            Blood pressure is easy to measure and easy to misunderstand. Learn
+            what the numbers mean, how to take a useful reading, and what to do
+            next.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#learn"
+              >Explore the guide <span aria-hidden="true">↓</span></a
+            ><a class="text-link" href="#measure"
+              >I have a reading <span aria-hidden="true">→</span></a
+            >
+          </div>
+          <p class="hero-note">
+            For learning only. A clinician should interpret your readings in
+            context.
+          </p>
+        </div>
+        <div
+          class="hero-art"
+          aria-label="Illustration of blood moving through a flexible artery"
+          role="img"
+        >
+          <div class="art-label label-top">
+            <span class="label-dot teal"></span> pressure in motion
+          </div>
+          <svg
+            class="artery-art"
+            viewBox="0 0 520 430"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient id="vessel" x1="0" x2="1" y1="0" y2="1">
+                <stop stop-color="#ff8a68" />
+                <stop offset="1" stop-color="#e9584b" />
+              </linearGradient>
+              <linearGradient id="blood" x1="0" x2="1">
+                <stop stop-color="#f8b9a5" />
+                <stop offset="1" stop-color="#ffe0c9" />
+              </linearGradient>
+            </defs>
+            <circle cx="290" cy="213" r="183" fill="#dcece4" />
+            <circle cx="290" cy="213" r="136" fill="#edf3e9" />
+            <path
+              d="M48 239c74-8 86-99 157-99 71 0 61 129 135 129 63 0 70-102 132-104"
+              fill="none"
+              stroke="#b83737"
+              stroke-width="80"
+              stroke-linecap="round"
+            />
+            <path
+              d="M48 239c74-8 86-99 157-99 71 0 61 129 135 129 63 0 70-102 132-104"
+              fill="none"
+              stroke="url(#vessel)"
+              stroke-width="68"
+              stroke-linecap="round"
+            />
+            <path
+              d="M48 239c74-8 86-99 157-99 71 0 61 129 135 129 63 0 70-102 132-104"
+              fill="none"
+              stroke="url(#blood)"
+              stroke-width="35"
+              stroke-linecap="round"
+              stroke-dasharray="8 19"
+            />
+            <path
+              d="m190 125 25 15-25 15m133 98 25 14-25 15"
+              fill="none"
+              stroke="#fff7e8"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <circle cx="130" cy="97" r="9" fill="#ef9d49" />
+            <circle cx="416" cy="323" r="6" fill="#167b74" />
+            <path
+              d="M395 79v30m-15-15h30"
+              stroke="#167b74"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+            <g transform="translate(321 43)">
+              <rect width="145" height="65" rx="13" fill="#fffdf8" />
+              <text
+                x="16"
+                y="27"
+                fill="#6b716b"
+                font-size="11"
+                font-family="Arial"
+              >
+                TYPICAL READING
+              </text>
+              <text
+                x="16"
+                y="51"
+                fill="#193b38"
+                font-size="23"
+                font-weight="700"
+                font-family="Arial"
+              >
+                120 / 80
+              </text>
+            </g>
+            <g transform="translate(42 322)">
+              <rect width="142" height="56" rx="12" fill="#fffdf8" />
+              <text
+                x="14"
+                y="23"
+                fill="#167b74"
+                font-size="11"
+                font-weight="700"
+                font-family="Arial"
+              >
+                SYSTOLIC
+              </text>
+              <text
+                x="14"
+                y="42"
+                fill="#6b716b"
+                font-size="11"
+                font-family="Arial"
+              >
+                when the heart beats
+              </text>
+            </g>
+          </svg>
+          <div class="art-caption">
+            Your blood pressure changes naturally throughout the day.
+          </div>
+        </div>
+        <div class="hero-scroll" aria-hidden="true">01 — UNDERSTAND</div>
+      </section>
 
-    <div class="card">
-      <h2>1. Personal Case History & Current Health Profile</h2>
-      <ul>
-        <li><strong>Age:</strong> 19 years old.</li>
-        <li>
-          <strong>Diagnosis:</strong> Stage 2 Hypertension (Systolic
-          persistently strictly above 140–150 mmHg).
-        </li>
-        <li>
-          <strong>Genetic Lineage:</strong> Great-grandfather &rarr; Paternal
-          Grandmother &rarr; Father &rarr; Patient (Autosomal Dominant Pattern).
-        </li>
-        <li>
-          <strong>Medication History:</strong>
-          <ul>
-            <li>
-              <strong>Lisinopril 5mg (ACE Inhibitor):</strong> Taken for 2 weeks
-              in June. Dropped systolic blood pressure to 100 mmHg. Treatment
-              was abruptly stopped when prescription ran out due to perceived
-              heart slowing and low numbers, leading to rebound hypertension.
-            </li>
-            <li>
-              <strong>Clopidogrel 75mg (Plavix):</strong> Prescribed following
-              chest pain when blood pressure meds were stopped. Misunderstood by
-              patient as a "painkiller" (it is an antiplatelet blood thinner
-              meant to prevent arterial blood clots).
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+      <section class="quick-strip" aria-label="Key facts">
+        <div>
+          <span class="strip-number">01</span>
+          <p>
+            <strong>Often silent</strong><br />High blood pressure usually has
+            no symptoms.
+          </p>
+        </div>
+        <div>
+          <span class="strip-number">02</span>
+          <p>
+            <strong>One reading is a snapshot</strong><br />Diagnosis usually
+            needs repeated measurements.
+          </p>
+        </div>
+        <div>
+          <span class="strip-number">03</span>
+          <p>
+            <strong>Manageable</strong><br />Care can reduce the risk of
+            complications.
+          </p>
+        </div>
+      </section>
 
-    <div class="card">
-      <h2>2. Complete Directory of 37 Target Organ Complications</h2>
+      <section class="section intro-section" id="learn">
+        <div class="section-heading">
+          <p class="eyebrow">01 / Understand the basics</p>
+          <h2>What is hypertension?</h2>
+        </div>
+        <div class="intro-grid">
+          <div>
+            <p class="lead">
+              Your heart pushes blood through arteries. Blood pressure is the
+              force of that blood against the artery walls.
+            </p>
+            <p>
+              It rises and falls with activity, stress, sleep, and other
+              factors. When it stays higher than recommended over time, it is
+              called <strong>hypertension</strong>. You can feel completely well
+              and still have it, so measurement matters.
+            </p>
+            <p>
+              In the WHO guidance for adults, hypertension is generally
+              diagnosed when properly measured blood pressure is
+              <strong>140/90 mmHg or higher on different days</strong>. Some
+              countries use lower thresholds; your clinician applies the
+              guideline relevant to you.
+            </p>
+          </div>
+          <figure class="pressure-figure">
+            <svg
+              viewBox="0 0 380 210"
+              role="img"
+              aria-labelledby="bp-title bp-desc"
+            >
+              <title id="bp-title">
+                The two numbers in a blood pressure reading
+              </title>
+              <desc id="bp-desc">
+                Systolic is the top number, measured as the heart beats.
+                Diastolic is the bottom number, measured between beats.
+              </desc>
+              <rect
+                x="8"
+                y="14"
+                width="364"
+                height="182"
+                rx="28"
+                fill="#e3eee7"
+              />
+              <text
+                x="190"
+                y="106"
+                text-anchor="middle"
+                font-size="65"
+                font-weight="700"
+                fill="#193b38"
+                font-family="Arial"
+              >
+                120/80
+              </text>
+              <path
+                d="M151 57v-25h-90v23"
+                fill="none"
+                stroke="#167b74"
+                stroke-width="2"
+              />
+              <path
+                d="M228 131v26h100v-21"
+                fill="none"
+                stroke="#e77a51"
+                stroke-width="2"
+              />
+              <text
+                x="25"
+                y="24"
+                font-size="12"
+                fill="#167b74"
+                font-weight="700"
+                font-family="Arial"
+              >
+                SYSTOLIC
+              </text>
+              <text
+                x="253"
+                y="183"
+                font-size="12"
+                fill="#a34f38"
+                font-weight="700"
+                font-family="Arial"
+              >
+                DIASTOLIC
+              </text>
+            </svg>
+            <figcaption>
+              <span><b>Top number</b> Pressure as your heart beats.</span
+              ><span><b>Bottom number</b> Pressure between beats.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
 
-      <div class="controls-wrapper">
-        <input
-          type="text"
-          id="complication-search"
-          placeholder="Type here to search complications quickly..."
-        />
-        <button id="print-btn" class="action-btn">
-          Print / Save PDF for Doctor
-        </button>
-      </div>
+      <section class="section reading-section" id="measure">
+        <div class="section-heading">
+          <p class="eyebrow">02 / Make sense of a reading</p>
+          <h2>Put your numbers in context.</h2>
+          <p class="section-sub">
+            Try the guide below. It cannot diagnose you, and the result is only
+            as reliable as the measurement.
+          </p>
+        </div>
+        <div class="reading-tool">
+          <div class="reading-inputs">
+            <div class="tool-topline">
+              <span class="step-number">A</span>
+              <div>
+                <h3>Enter a recent reading</h3>
+                <p>Use mmHg, the standard unit shown on most monitors.</p>
+              </div>
+            </div>
+            <div class="number-fields">
+              <label for="systolic"
+                >Top number <span>(systolic)</span
+                ><input
+                  id="systolic"
+                  inputmode="numeric"
+                  type="number"
+                  min="50"
+                  max="300"
+                  placeholder="120" /></label
+              ><span class="slash" aria-hidden="true">/</span
+              ><label for="diastolic"
+                >Bottom number <span>(diastolic)</span
+                ><input
+                  id="diastolic"
+                  inputmode="numeric"
+                  type="number"
+                  min="30"
+                  max="200"
+                  placeholder="80"
+              /></label>
+            </div>
+            <button id="reading-check" class="button button-teal" type="button">
+              See guidance <span aria-hidden="true">→</span>
+            </button>
+            <p
+              id="reading-result"
+              class="reading-result"
+              role="status"
+              aria-live="polite"
+            >
+              Your numbers stay on this device and are not saved.
+            </p>
+          </div>
+          <div class="reading-scale">
+            <h3>Adult reference points</h3>
+            <div class="scale-row">
+              <span class="scale-mark mark-green"></span>
+              <div>
+                <b>Below 120 / 80</b>
+                <p>Typical “normal” range in many guidelines.</p>
+              </div>
+            </div>
+            <div class="scale-row">
+              <span class="scale-mark mark-amber"></span>
+              <div>
+                <b>Repeatedly 140 / 90 or higher</b>
+                <p>WHO adult diagnostic threshold; confirm with a clinician.</p>
+              </div>
+            </div>
+            <div class="scale-row">
+              <span class="scale-mark mark-red"></span>
+              <div>
+                <b>Above 180 and/or 120</b>
+                <p>
+                  Very high. Repeat after at least 1 minute and follow urgent
+                  guidance.
+                </p>
+              </div>
+            </div>
+            <p class="scale-foot">
+              Thresholds and targets differ by guideline, age, pregnancy, and
+              health conditions. The higher number in either position matters.
+            </p>
+          </div>
+        </div>
+        <div class="urgent-note">
+          <span class="urgent-icon" aria-hidden="true">!</span>
+          <p>
+            <strong>Get urgent help for warning symptoms.</strong> Chest pain,
+            trouble breathing, sudden weakness or numbness, vision changes, or
+            difficulty speaking can be emergencies. Contact local emergency
+            services now. If a repeated reading is above 180/120 with any of
+            these symptoms, do not wait for it to come down.
+          </p>
+        </div>
+      </section>
 
-      <div class="category-group">
-        <h3>I. Cerebrovascular & Neurological System</h3>
-        <ol>
-          <li>
-            <strong>Stroke:</strong> Shear stress causes arterial tears leading
-            to ischemic clots or hemorrhagic vessel rupture in the brain.
-          </li>
-          <li>
-            <strong>Brain Damage:</strong> Chronic stress induces deep
-            small-vessel arteriolosclerosis, destroying white matter
-            connections.
-          </li>
-          <li>
-            <strong>Cerebral Atrophy:</strong> Microvascular hypoperfusion
-            starves brain tissue, driving whole-brain volume loss.
-          </li>
-          <li>
-            <strong>Accelerated Brain Aging:</strong> Structural neuro-decay
-            causes brain tissue to functionally age rapidly.
-          </li>
-          <li>
-            <strong>Vascular Dementia:</strong> Cumulative micro-strokes destroy
-            executive function, memory, and cognitive speed.
-          </li>
-          <li>
-            <strong>Alzheimer’s Pathology Acceleration:</strong> Blood-brain
-            barrier impairment reduces amyloid-beta clearance.
-          </li>
-          <li>
-            <strong>Cognitive Impairment:</strong> Subcortical microvascular
-            lesions diminish attention span and processing speed.
-          </li>
-          <li>
-            <strong>Hypertensive Encephalopathy:</strong> Acute pressure surges
-            cause cerebral edema, papilledema, seizures, and coma.
-          </li>
-          <li>
-            <strong>Vascular Depression:</strong> Subcortical white matter
-            lesions disrupt frontostriatal mood circuits.
-          </li>
-          <li>
-            <strong>Pulsatile Tinnitus:</strong> Turbulent flow through
-            stiffened carotid arteries creates a rhythmic thumping in the ears.
-          </li>
-        </ol>
-      </div>
+      <section class="section body-section">
+        <div class="section-heading">
+          <p class="eyebrow">03 / Why it matters</p>
+          <h2>Explore the organs it can affect.</h2>
+          <p class="section-sub">
+            Choose an area to see the connection. Risk builds over time and
+            varies from person to person.
+          </p>
+        </div>
+        <div class="body-explorer">
+          <div class="body-visual">
+            <svg
+              viewBox="0 0 300 430"
+              role="img"
+              aria-label="Illustration of a person with highlighted brain, heart, kidneys and eyes"
+            >
+              <path
+                d="M150 36c-28 0-47 21-47 49 0 22 10 39 25 48l-4 25c-31 6-55 22-63 47l-18 92c-4 21 24 27 31 7l23-69-4 112c0 18 28 19 31 0l10-99 10 99c3 19 31 18 31 0l-4-112 23 69c7 20 35 14 31-7l-18-92c-8-25-32-41-63-47l-4-25c15-9 25-26 25-48 0-28-19-49-47-49Z"
+                fill="#d5e5da"
+                stroke="#8db2a3"
+                stroke-width="3"
+              />
+              <path
+                d="M124 74c0-10 8-17 18-17 4 0 7 1 10 4 3-3 6-4 10-4 10 0 18 7 18 17 0 11-10 18-28 29-18-11-28-18-28-29Z"
+                fill="#ef9b7b"
+                stroke="#be5d4a"
+                stroke-width="2"
+              />
+              <path
+                d="M150 158c-15-15-30 7 0 27 30-20 15-42 0-27Z"
+                fill="#e46b59"
+              />
+              <path
+                d="M119 243c-10-12-25-2-18 14 5 11 13 17 20 18 8-2 15-9 19-20 5-15-9-24-21-12Zm62 0c-10-12-25-2-18 14 5 11 13 17 20 18 8-2 15-9 19-20 5-15-9-24-21-12Z"
+                fill="#78aaa0"
+                stroke="#43847b"
+                stroke-width="2"
+              />
+              <g
+                class="organ-hotspot"
+                data-organ="brain"
+                tabindex="0"
+                role="button"
+                aria-label="Learn about effects on the brain"
+              >
+                <circle
+                  cx="150"
+                  cy="82"
+                  r="34"
+                  fill="transparent"
+                  stroke="#167b74"
+                  stroke-width="2"
+                  stroke-dasharray="4 4"
+                />
+              </g>
+              <g
+                class="organ-hotspot"
+                data-organ="heart"
+                tabindex="0"
+                role="button"
+                aria-label="Learn about effects on the heart"
+              >
+                <circle
+                  cx="150"
+                  cy="171"
+                  r="29"
+                  fill="transparent"
+                  stroke="#167b74"
+                  stroke-width="2"
+                  stroke-dasharray="4 4"
+                />
+              </g>
+              <g
+                class="organ-hotspot"
+                data-organ="kidneys"
+                tabindex="0"
+                role="button"
+                aria-label="Learn about effects on the kidneys"
+              >
+                <ellipse
+                  cx="150"
+                  cy="256"
+                  rx="47"
+                  ry="34"
+                  fill="transparent"
+                  stroke="#167b74"
+                  stroke-width="2"
+                  stroke-dasharray="4 4"
+                />
+              </g>
+              <g fill="#fffdf8" stroke="#167b74" stroke-width="2">
+                <circle cx="102" cy="83" r="13" />
+                <circle cx="197" cy="171" r="13" />
+                <circle cx="205" cy="257" r="13" />
+              </g>
+              <g
+                fill="#167b74"
+                font-family="Arial"
+                font-size="12"
+                font-weight="700"
+                text-anchor="middle"
+              >
+                <text x="102" y="87">1</text>
+                <text x="197" y="175">2</text>
+                <text x="205" y="261">3</text>
+              </g>
+            </svg>
+            <p class="visual-hint">Click a numbered area or use the cards →</p>
+          </div>
+          <div class="organ-content">
+            <div
+              class="organ-tabs"
+              role="tablist"
+              aria-label="Organs affected by hypertension"
+            >
+              <button
+                class="organ-tab active"
+                id="tab-brain"
+                role="tab"
+                aria-selected="true"
+                aria-controls="organ-detail"
+                data-organ="brain"
+              >
+                01 Brain</button
+              ><button
+                class="organ-tab"
+                id="tab-heart"
+                role="tab"
+                aria-selected="false"
+                aria-controls="organ-detail"
+                data-organ="heart"
+              >
+                02 Heart</button
+              ><button
+                class="organ-tab"
+                id="tab-kidneys"
+                role="tab"
+                aria-selected="false"
+                aria-controls="organ-detail"
+                data-organ="kidneys"
+              >
+                03 Kidneys
+              </button>
+            </div>
+            <article
+              id="organ-detail"
+              class="organ-detail"
+              role="tabpanel"
+              aria-labelledby="tab-brain"
+            >
+              <p class="eyebrow" id="organ-kicker">BRAIN & BLOOD VESSELS</p>
+              <h3 id="organ-title">A higher chance of stroke</h3>
+              <p id="organ-copy">
+                Long-term high pressure can damage brain arteries. A vessel may
+                become blocked or rupture, causing a stroke. Persistent
+                hypertension is also associated with cognitive decline later in
+                life.
+              </p>
+              <div class="organ-fact">
+                <span class="fact-symbol">↗</span>
+                <p id="organ-action">
+                  <b>What helps:</b> Confirming and treating high blood pressure
+                  lowers stroke risk.
+                </p>
+              </div>
+            </article>
+            <div class="organ-legend">
+              <span
+                ><i class="legend-dot"></i> Areas shown are common target
+                organs</span
+              ><span>Information reviewed from CDC and WHO</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div class="category-group">
-        <h3>II. Cardiovascular & Structural Heart Disease</h3>
-        <ol start="11">
-          <li>
-            <strong>Myocardial Infarction (Heart Attack):</strong> High shear
-            stress ruptures coronary atherosclerotic plaques, blocking oxygen to
-            the heart muscle.
-          </li>
-          <li>
-            <strong>Heart Failure:</strong> Left ventricular hypertrophy (LVH)
-            progresses to diastolic stiffness or systolic chamber dilation.
-          </li>
-          <li>
-            <strong>Angina Pectoris:</strong> Narrowed coronary arteries
-            restrict blood flow, causing acute chest pain during exertion or
-            stress.
-          </li>
-          <li>
-            <strong>Atrial Fibrillation:</strong> Elevated end-diastolic
-            pressure stretches the left atrium, triggering chaotic electrical
-            arrhythmias.
-          </li>
-          <li>
-            <strong>Aortic Regurgitation:</strong> Dilation of the aortic root
-            prevents valve leaflets from closing, causing backward blood
-            leakage.
-          </li>
-          <li>
-            <strong>Sudden Cardiac Death:</strong> Ischemic, hypertrophied
-            muscle creates fibrotic re-entry circuits, triggering fatal
-            ventricular fibrillation.
-          </li>
-        </ol>
-      </div>
+      <section class="section causes-section">
+        <div class="section-heading">
+          <p class="eyebrow">04 / It is not one-size-fits-all</p>
+          <h2>Where does high blood pressure come from?</h2>
+        </div>
+        <div class="cause-grid">
+          <article class="cause-card">
+            <span class="cause-icon">↗</span>
+            <h3>Primary hypertension</h3>
+            <p>
+              Most cases develop gradually through a mix of factors, including
+              family history, age, diet, activity, sleep, and other health
+              conditions.
+            </p>
+          </article>
+          <article class="cause-card">
+            <span class="cause-icon">⌕</span>
+            <h3>Secondary hypertension</h3>
+            <p>
+              Sometimes another condition or medicine contributes. Kidney or
+              hormone disorders and some medicines can be involved.
+            </p>
+          </article>
+          <article class="cause-card">
+            <span class="cause-icon">◎</span>
+            <h3>Family history</h3>
+            <p>
+              High blood pressure in close relatives can increase your chance of
+              developing it. It does not prove a single inherited syndrome or
+              gene.
+            </p>
+          </article>
+        </div>
+        <div class="young-note">
+          <span>For younger adults</span>
+          <p>
+            High readings at a young age deserve a proper assessment. A
+            clinician may review measurement technique, medicines, family
+            history, and whether further evaluation is appropriate.
+          </p>
+        </div>
+      </section>
 
-      <div class="category-group">
-        <h3>III. Vascular & Arterial Systems</h3>
-        <ol start="17">
-          <li>
-            <strong>Aneurysms:</strong> Continuous arterial wall pressure
-            degrades collagen and elastin, causing fatal arterial bulges.
-          </li>
-          <li>
-            <strong>Aortic Dissection:</strong> High pressure rips the intimal
-            layer of the aorta, shearing the vessel wall longitudinally.
-          </li>
-          <li>
-            <strong>Peripheral Artery Disease (PAD):</strong> Obstruction of
-            lower-limb arteries causes pain, non-healing ulcers, and gangrene.
-          </li>
-          <li>
-            <strong>Hypertensive Crisis Complications:</strong> Surges above
-            180/120 mmHg cause acute organ destruction within hours.
-          </li>
-          <li>
-            <strong>Severe Epistaxis:</strong> High pressure ruptures deep nasal
-            arterioles.
-          </li>
-        </ol>
-      </div>
+      <section class="section how-section">
+        <div class="section-heading">
+          <p class="eyebrow">05 / Take a better reading</p>
+          <h2>Good technique changes the number.</h2>
+          <p class="section-sub">
+            Follow the steps before using a home reading to guide a conversation
+            with a clinician.
+          </p>
+        </div>
+        <div class="steps-layout">
+          <div
+            class="steps-list"
+            role="tablist"
+            aria-label="Steps to measure blood pressure"
+          >
+            <button
+              class="step-card active"
+              role="tab"
+              aria-selected="true"
+              aria-controls="step-visual"
+              data-step="0"
+            >
+              <span>01</span><b>Prepare</b
+              ><small>Rest quietly for 5 minutes.</small></button
+            ><button
+              class="step-card"
+              role="tab"
+              aria-selected="false"
+              aria-controls="step-visual"
+              data-step="1"
+            >
+              <span>02</span><b>Position</b
+              ><small>Back supported, feet flat.</small></button
+            ><button
+              class="step-card"
+              role="tab"
+              aria-selected="false"
+              aria-controls="step-visual"
+              data-step="2"
+            >
+              <span>03</span><b>Measure</b
+              ><small>Bare arm, cuff at heart level.</small></button
+            ><button
+              class="step-card"
+              role="tab"
+              aria-selected="false"
+              aria-controls="step-visual"
+              data-step="3"
+            >
+              <span>04</span><b>Repeat & record</b
+              ><small>Take two readings, 1 minute apart.</small>
+            </button>
+          </div>
+          <div
+            class="step-visual"
+            id="step-visual"
+            role="tabpanel"
+            aria-live="polite"
+          >
+            <div class="step-illustration">
+              <svg
+                viewBox="0 0 250 170"
+                role="img"
+                aria-label="Person sitting calmly before measuring blood pressure"
+              >
+                <rect
+                  x="22"
+                  y="22"
+                  width="206"
+                  height="126"
+                  rx="20"
+                  fill="#e4eee8"
+                />
+                <path
+                  d="M77 123V84c0-19 14-34 33-34s33 15 33 34v39m-65 0h100"
+                  fill="none"
+                  stroke="#167b74"
+                  stroke-width="9"
+                  stroke-linecap="round"
+                />
+                <circle cx="110" cy="35" r="17" fill="#e99a79" />
+                <path
+                  d="M67 126v12m89-12v12"
+                  stroke="#193b38"
+                  stroke-width="7"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M183 63a21 21 0 1 1-6 15"
+                  fill="none"
+                  stroke="#ed9950"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="m174 69 4 10 9-5"
+                  fill="none"
+                  stroke="#ed9950"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <text
+                  x="188"
+                  y="113"
+                  fill="#193b38"
+                  font-size="12"
+                  font-weight="700"
+                  font-family="Arial"
+                >
+                  5:00
+                </text>
+              </svg>
+            </div>
+            <p class="eyebrow" id="step-kicker">BEFORE YOU START</p>
+            <h3 id="step-title">Give your body a quiet moment.</h3>
+            <p id="step-copy">
+              Avoid caffeine, smoking, and exercise for 30 minutes beforehand.
+              Empty your bladder, then sit quietly for at least five minutes.
+            </p>
+            <a
+              class="source-inline"
+              href="https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings/monitoring-your-blood-pressure-at-home"
+              target="_blank"
+              rel="noreferrer"
+              >See AHA measurement guidance ↗</a
+            >
+          </div>
+        </div>
+      </section>
 
-      <div class="category-group">
-        <h3>IV. Renal (Kidney) System</h3>
-        <ol start="22">
-          <li>
-            <strong>End-Stage Renal Disease (Kidney Failure):</strong> Hyaline
-            arteriolosclerosis destroys glomeruli and nephron filtration.
-          </li>
-          <li>
-            <strong>Microalbuminuria / Proteinuria:</strong> Elevated
-            intraglomerular pressure forces plasma proteins into the urine.
-          </li>
-        </ol>
-      </div>
+      <section class="section protect-section" id="protect">
+        <div class="protect-heading">
+          <div>
+            <p class="eyebrow">06 / Everyday care</p>
+            <h2>Small habits add up.<br /><em>Care is personal.</em></h2>
+          </div>
+          <p>
+            Daily choices can support healthy blood pressure. Many people also
+            need medicine. A care plan should fit your health, preferences, and
+            circumstances.
+          </p>
+        </div>
+        <div class="habit-grid">
+          <article>
+            <span>01</span>
+            <h3>Eat for heart health</h3>
+            <p>
+              Choose more vegetables, fruit, beans, whole grains, and minimally
+              processed foods. Ask about salt reduction that fits your diet.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Move regularly</h3>
+            <p>
+              Build activity in a way that feels safe and sustainable. If you
+              have a health condition, ask your clinician what is right for you.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Take medicines as agreed</h3>
+            <p>
+              Do not start, stop, or change a blood pressure medicine on your
+              own. Ask your prescriber or pharmacist about side effects or
+              missed doses.
+            </p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Keep a record</h3>
+            <p>
+              Bring your readings, medicines, and questions to appointments. A
+              log can help your care team see patterns over time.
+            </p>
+          </article>
+        </div>
+        <div class="myth-row">
+          <span class="myth-tag">COMMON MYTH</span>
+          <p>
+            <b>“I feel fine, so my pressure must be fine.”</b> High blood
+            pressure often causes no symptoms. Measurement—not how you feel—is
+            how you know.
+          </p>
+        </div>
+      </section>
 
-      <div class="category-group">
-        <h3>V. Ocular (Eye) System</h3>
-        <ol start="24">
-          <li>
-            <strong>Hypertensive Retinopathy:</strong> Retinal hemorrhages,
-            cotton-wool spots, and papilledema cause vision loss.
-          </li>
-          <li>
-            <strong>Retinal Vein/Artery Occlusion:</strong> Acute blockage of
-            central retinal vessels causes sudden, permanent blindness.
-          </li>
-          <li>
-            <strong>Anterior Ischemic Optic Neuropathy (AION):</strong> Ischemia
-            of the optic nerve head destroys visual fields.
-          </li>
-          <li>
-            <strong>Hypertensive Choroidopathy:</strong> Hyperperfusion damages
-            the choroidal bed, leading to retinal detachment.
-          </li>
-        </ol>
-      </div>
+      <section class="section quiz-section">
+        <div class="quiz-intro">
+          <p class="eyebrow">07 / Quick check</p>
+          <h2>One minute.<br /><em>Three questions.</em></h2>
+          <p>Check what stuck. You can try again as often as you like.</p>
+          <button class="button button-dark" id="start-quiz" type="button">
+            Start the quiz <span aria-hidden="true">→</span>
+          </button>
+        </div>
+        <div class="quiz-panel" id="quiz-panel">
+          <div class="quiz-progress">
+            <span id="quiz-count">Ready when you are</span
+            ><span class="quiz-dots" aria-hidden="true"
+              ><i></i><i></i><i></i
+            ></span>
+          </div>
+          <h3 id="quiz-question">Is high blood pressure always noticeable?</h3>
+          <div class="quiz-options" id="quiz-options">
+            <button type="button" data-answer="yes" disabled>
+              Yes, usually</button
+            ><button type="button" data-answer="no" disabled>
+              No, often it has no symptoms
+            </button>
+          </div>
+          <p class="quiz-feedback" id="quiz-feedback" aria-live="polite">
+            Press “Start the quiz” to begin.
+          </p>
+        </div>
+      </section>
 
-      <div class="category-group">
-        <h3>VI. Reproductive, Metabolic, & Systemic</h3>
-        <ol start="28">
-          <li>
-            <strong>Erectile Dysfunction:</strong> Endothelial nitric oxide
-            depletion prevents smooth muscle relaxation in penile tissue.
-          </li>
-          <li>
-            <strong>Female Sexual Dysfunction:</strong> Microvascular sclerosis
-            reduces pelvic perfusion and lubrication.
-          </li>
-          <li>
-            <strong>Preeclampsia & Eclampsia:</strong> Placental vascular damage
-            causes maternal organ failure and seizures.
-          </li>
-          <li>
-            <strong>Placental Abruption:</strong> High vascular pressure shears
-            the placenta off the uterine wall.
-          </li>
-          <li>
-            <strong>Intrauterine Growth Restriction (IUGR):</strong> Constricted
-            placental vessels deprive the fetus of nutrients.
-          </li>
-          <li>
-            <strong>Metabolic Syndrome:</strong> Synergistic inflammation
-            accelerating overall arterial stiffening.
-          </li>
-          <li>
-            <strong>Sleep Apnea Aggravation:</strong> Sympathetic surges drive
-            nocturnal pressure spikes and tissue edema.
-          </li>
-          <li>
-            <strong>Osteoporosis:</strong> Impaired renal calcium reabsorption
-            causes hypercalciuria and bone resorption.
-          </li>
-        </ol>
-      </div>
-
-      <div class="category-group">
-        <h3>VII. Terminal Outcomes</h3>
-        <ol start="36">
-          <li>
-            <strong>Shorter Lifespan:</strong> Premature multi-system
-            microvascular degradation.
-          </li>
-          <li>
-            <strong>Premature Death:</strong> Structural collapse from stroke,
-            heart attack, aortic rupture, or renal failure.
-          </li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>3. The Pressure-Time Formula & Age Dynamics</h2>
-      <div class="code-formula">
-        Vascular Damage = Hemodynamic Pressure x Time Exposure
-      </div>
-      <p>
-        A blood pressure reading of 150/95 mmHg exerts the exact same mechanical
-        shear force on endothelial cells in a 19-year-old as it does in a
-        70-year-old. Young age does not protect blood vessels. Leaving Stage 2
-        hypertension untreated at 19 simply shifts the end-stage organ collapse
-        timeline into your 30s or 40s.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>4. Genetic Mechanics & Transmission</h2>
-      <p>
-        <strong>Autosomal Dominant Pattern:</strong> Direct male-to-male
-        transmission (Father &rarr; Son) proves the gene is on a non-sex
-        chromosome (Autosomes) and is <strong>not X-linked</strong> (fathers
-        pass Y chromosomes to sons).
-      </p>
-      <p>
-        <strong>Primary Genetic Candidates:</strong>
-      </p>
-      <ul>
-        <li>
-          <strong>Liddle Syndrome:</strong> Mutated renal sodium channels (ENaC)
-          permanently open, forcing massive sodium retention.
-        </li>
-        <li>
-          <strong>Familial Hyperaldosteronism:</strong> Adrenal overproduction
-          of aldosterone driving systemic pressure.
-        </li>
-        <li>
-          <strong>Polycystic Kidney Disease (ADPKD):</strong> Structural kidney
-          cysts driving early hypertension.
-        </li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>5. Cure vs. Lifelong Control (The Eyeglasses Rule)</h2>
-      <p>
-        <strong>No Cure Exists:</strong> You cannot rewrite the DNA in your
-        cells to delete the mutated gene.
-      </p>
-      <p>
-        <strong>Control Neutralizes the Gene:</strong> Daily targeted
-        pharmacological therapy overrides the faulty biological mechanism. Like
-        wearing eyeglasses for bad eyesight, taking daily medication normalizes
-        blood pressure (&lt;120/80 mmHg), completely halting organ damage and
-        resetting life expectancy to normal.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>6. Pharmacological & Diagnostic Management Protocol</h2>
-      <ul>
-        <li>
-          <strong>Never Stop Cold Turkey:</strong> If a drug drops systolic
-          pressure to 100 mmHg (as Lisinopril 5mg did), the dose must be
-          adjusted down (e.g., to 2.5mg) or substituted—never abandoned. Abrupt
-          stopping causes severe rebound surges.
-        </li>
-        <li>
-          <strong>Clopidogrel (Plavix) Clarification:</strong> Clopidogrel is an
-          <em>antiplatelet blood thinner</em>, NOT a painkiller. It does not
-          treat pain; it prevents blood clots in patients with suspected
-          coronary artery disease.
-        </li>
-        <li>
-          <strong>Diagnostics Needed:</strong> Plasma Renin Activity (PRA),
-          Aldosterone levels, Renal Ultrasound, Urine Albumin-to-Creatinine
-          Ratio (UACR), and 24-hour Ambulatory BP Monitoring.
-        </li>
-      </ul>
-    </div>
-
-    <script src="bone.js"></script>
+      <section class="section sources-section" id="sources">
+        <div class="source-head">
+          <div>
+            <p class="eyebrow">08 / Keep learning</p>
+            <h2>Reliable places to read more.</h2>
+          </div>
+          <button class="button button-outline" id="print-btn" type="button">
+            Print this guide <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <p class="source-disclaimer">
+          Educational information, not a personal diagnosis or treatment plan.
+          Guidance can differ between countries and among people. Discuss your
+          readings and care with a qualified health professional.
+        </p>
+        <div class="source-links">
+          <a
+            href="https://www.who.int/news-room/fact-sheets/detail/hypertension"
+            target="_blank"
+            rel="noreferrer"
+            ><span>WORLD HEALTH ORGANIZATION</span
+            ><b>Hypertension fact sheet ↗</b
+            ><small>Definition, risks, treatment and prevention</small></a
+          ><a
+            href="https://www.cdc.gov/high-blood-pressure/about/"
+            target="_blank"
+            rel="noreferrer"
+            ><span>U.S. CENTERS FOR DISEASE CONTROL</span
+            ><b>About high blood pressure ↗</b
+            ><small>Symptoms, measurement and health effects</small></a
+          ><a
+            href="https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings/monitoring-your-blood-pressure-at-home"
+            target="_blank"
+            rel="noreferrer"
+            ><span>AMERICAN HEART ASSOCIATION</span
+            ><b>Home blood pressure monitoring ↗</b
+            ><small>Step-by-step home measurement guidance</small></a
+          ><a
+            href="https://www.nhlbi.nih.gov/health/high-blood-pressure/treatment"
+            target="_blank"
+            rel="noreferrer"
+            ><span>U.S. NATIONAL HEART, LUNG, AND BLOOD INSTITUTE</span
+            ><b>Treatment options ↗</b
+            ><small>Lifestyle changes and medicines</small></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="brand" href="#top"
+        ><span class="brand-mark">+</span> pressure<span>,</span> clearly</a
+      ><span>Clear information. Better conversations.</span
+      ><a href="#top">Back to top ↑</a>
+    </footer>
   </body>
 </html>
